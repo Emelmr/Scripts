@@ -3,13 +3,13 @@ while not game:IsLoaded() do
 end
 
 if _G.Stall then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/Armor"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/Armor"))()
 elseif _G.FemaleRaid then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/Attack"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/Attack"))()
 elseif _G.Missions then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/whatsuphomies"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/whatsuphomies"))()
 elseif _G.AutoSpin then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/spinny"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/spinny"))()
 end
 
 task.wait(_G.RetryDelay)
