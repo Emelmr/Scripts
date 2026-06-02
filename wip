@@ -1,18 +1,27 @@
+-- This runs the loop in the background so it doesn't block the script
+task.spawn(function()
+    while true do
+        task.wait(32)
+        print("migger")
+    end
+end)
+
+-- Now the script can safely continue down here!
 while not game:IsLoaded() do
     task.wait(0.1)
 end
 
 if _G.Stall then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/Armor"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/Armor"))()
 elseif _G.FemaleRaid then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/Attack"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/Attack"))()
 elseif _G.Missions then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/whatsuphomies"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/whatsuphomies"))()
 elseif _G.AutoSpin then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Emelmr/Scripts/refs/heads/main/spinny"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KingOreoTheThird/Scripts/refs/heads/main/spinny"))()
 end
 
-task.wait(_G.RetryDelay)
+task.wait(_G.RetryDelay or 5) -- Defaults to 5 seconds if _G.RetryDelay isn't set yet
 
 pcall(function()
     local remotes = game:GetService("ReplicatedStorage"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("GET")
